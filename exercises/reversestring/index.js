@@ -14,4 +14,25 @@ function reverse(str) {
     return reversedString;
 }
 
-module.exports = reverse;
+const reverseTwo = string => {
+    const array = string.split(``);
+    array.reverse();
+    return array.join(``);
+};
+
+const reverseThree = string => {
+    let reversedString = ``;
+    for (let character of string) {
+        reversedString = character + reversedString;
+    }
+    return reversedString;
+};
+
+const reverseFour = string => {
+    const arr = string.split(``);
+    return arr.reduce((reversed, char) => {
+        return char + reversed;
+    }, ``);
+};
+
+module.exports = reverseFour;
