@@ -9,4 +9,6 @@ Order for exercises:
 
 - String Reversal
 - Palindromes
+- reverseint
+- maxchar
 
