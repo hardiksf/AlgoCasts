@@ -13,11 +13,16 @@ function palindrome(str) {
         reversedString = char + reversedString;
     }
 
-    if (str === reversedString) {
-        return true;
-    } else {
-        return false;
-    }
+    return str === reversedString;
 }
 
-module.exports = palindrome;
+const palindromeTwo = string => {
+    const length = string.length;
+    return string.split(``).every(
+        (char, index) => {
+            return char === string[length - 1 - index];
+        }
+    );
+};
+
+module.exports = palindromeTwo;
