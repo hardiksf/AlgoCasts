@@ -11,4 +11,5 @@ Order for exercises:
 - Palindromes
 - reverseint
 - maxchar
+- fizzbuzz
 
