@@ -12,4 +12,5 @@ Order for exercises:
 - reverseint
 - maxchar
 - fizzbuzz
-
+- chunk
+- anagrams
