@@ -14,3 +14,5 @@ Order for exercises:
 - fizzbuzz
 - chunk
 - anagrams
+- capitalize
+ 
