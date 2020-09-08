@@ -1,5 +1,7 @@
-// --- Directions
-// Implement bubbleSort, selectionSort, and mergeSort
+/*
+ * --- Directions
+ * Implement bubbleSort, selectionSort, and mergeSort
+ */
 
 function bubbleSort(arr) {
 

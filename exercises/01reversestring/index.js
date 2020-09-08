@@ -1,10 +1,12 @@
-// --- Directions
-// Given a string, return a new string with the reversed
-// order of characters
-// --- Examples
-//   reverse('apple') === 'leppa'
-//   reverse('hello') === 'olleh'
-//   reverse('Greetings!') === '!sgniteerG'
+/*
+ * --- Directions
+ * Given a string, return a new string with the reversed
+ * order of characters
+ * --- Examples
+ *   reverse('apple') === 'leppa'
+ *   reverse('hello') === 'olleh'
+ *   reverse('Greetings!') === '!sgniteerG'
+ */
 
 function reverse(str) {
     let reversedString = ``;
@@ -22,7 +24,7 @@ const reverseTwo = string => {
 
 const reverseThree = string => {
     let reversedString = ``;
-    for (let character of string) {
+    for (const character of string) {
         reversedString = character + reversedString;
     }
     return reversedString;
