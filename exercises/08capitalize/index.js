@@ -36,4 +36,13 @@ const capitalizeTwo = str => {
 
 };
 
-module.exports = capitalizeTwo;
+const capitalizeThree = string => {
+    const array = string.split(' ');
+    const result = [];
+    for (element of array) {
+        result.push(element[0].toUpperCase() + element.slice(1));
+    }
+    return result.join(' ');
+};
+
+module.exports = capitalizeThree;
