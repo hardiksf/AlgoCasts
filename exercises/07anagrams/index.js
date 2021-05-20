@@ -10,36 +10,6 @@
  *   anagrams('Hi there', 'Bye there') --> False
  */
 
-function anagrams(stringA, stringB) {
-    const mapA = getMapOfCharCount(stringA);
-    const mapB = getMapOfCharCount(stringB);
-    if (mapA.size !== mapB.size) {
-        return false;
-    }
-
-    for (var [key, value] of mapA) {
-        valeOfB = mapB.get(key);
-        if (value !== valeOfB) {
-            return false;
-        }
-    }
-    return true;
-}
-
-const getMapOfCharCount = string => {
-    const map = new Map();
-    for (const char of string.toLowerCase()) {
-        if (RegExp(/[a-z]/).test(char)) {
-            if (map.has(char)) {
-                map.set(char, map.get(char) + 1);
-            } else {
-                map.set(char, 1);
-            }
-        }
-    }
-    return map;
-};
-
 const anagramsTwo = (stringA, stringB) => {
     return processedString(stringA) === processedString(stringB);
 };
@@ -51,4 +21,38 @@ const processedString = string => {
         .join(``);
 };
 
-module.exports = anagramsTwo;
+const processedStringTwo = string => {
+    return string.replace(/[^\w]/g, '').toLowerCase();
+};
+
+const mapOfCharacterCount = string => {
+    const map = new Map();
+    for (const char of processedStringTwo(string)) {
+        if (map.has(char)) {
+            map.set(char, map.get(char) + 1);
+        } else {
+            map.set(char, 1);
+        }
+    }
+    return map;
+};
+
+const anagramsThree = (stringA, stringB) => {
+    const mapA = mapOfCharacterCount(stringA);
+    const mapB = mapOfCharacterCount(stringB);
+
+    if (mapA.size !== mapB.size) {
+        return false; // Alternative: compare the length of processed strings instead of checking the size of maps
+    } else {
+        let currentValueB;
+        for ([key, value] of mapA) {
+            currentValueB = mapB.get(key);
+            if (value !== currentValueB) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
+
+module.exports = anagramsThree;
