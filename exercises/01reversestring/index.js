@@ -17,9 +17,9 @@ function reverse(str) {
 }
 
 const reverseTwo = string => {
-    const array = string.split(``);
-    array.reverse();
-    return array.join(``);
+    return string.split(``)
+        .reverse()
+        .join(``);
 };
 
 const reverseThree = string => {
@@ -37,4 +37,13 @@ const reverseFour = string => {
     }, ``);
 };
 
-module.exports = reverseFour;
+const reverseFive = string => {
+    const length = string.length;
+    let result = '';
+    for (let i = length - 1;  i >= 0; i--) {
+        const char = string.charAt(i);
+        result += char;
+    }
+    return result;
+};
+module.exports = reverseFive;

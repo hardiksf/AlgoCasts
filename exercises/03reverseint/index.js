@@ -12,7 +12,7 @@
 
 function reverseInt(n) {
     const string = n.toString();
-    let reversedString = `;`;
+    let reversedString = ``;
     for (const char of string) {
         reversedString = char + reversedString;
     }
@@ -29,4 +29,4 @@ const reverseIntTwo = n => {
     return parseInt(reverseString) * Math.sign(n);
 };
 
-module.exports = reverseIntTwo;
+module.exports = reverseInt;

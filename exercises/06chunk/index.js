@@ -29,4 +29,17 @@ const chunkTwo = (array, size) => {
     return chunk;
 };
 
-module.exports = chunkTwo;
+const chunkThree = (array, size) => {
+    const result = [];
+    for (const element of array) {
+        const lastElement = result[result.length - 1];
+        if (!lastElement || lastElement.length === size) {
+            result.push([element]);
+        } else {
+            lastElement.push(element);
+        }
+    }
+    return result;
+};
+
+module.exports = chunkThree;
